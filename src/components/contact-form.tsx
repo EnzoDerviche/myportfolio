@@ -35,16 +35,15 @@ export default function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Configura estos valores con tus credenciales de EmailJS
-      const serviceId = "service_n9l2e4s" // Reemplaza con tu Service ID de EmailJS
-      const templateId = "template_b35nzvc" // Reemplaza con tu Template ID de EmailJS
-      const publicKey = "PfThk_W5p4-WgpSzB" // Reemplaza con tu Public Key de EmailJS
 
+      const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID || ''
+      const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID || ''
+      const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY || ''
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_name: "Tu Nombre", // Personaliza con tu nombre
+        to_name: "Enzo Derviche",
         reply_to: formData.email,
       }
 
