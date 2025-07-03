@@ -12,10 +12,10 @@ interface HeroSectionProps {
 export default function HeroSection({ scrollToSection }: HeroSectionProps) {
   const { displayText, isComplete, isDeleting } = useTypewriter({
     text: "Desarrollador Full Stack con experiencia en React, Node.js y migración de sistemas legacy",
-    speed: 50, // Velocidad de escritura
-    deleteSpeed: 30, // Velocidad de borrado (más rápido)
-    delayBetweenCycles: 3000, // Pausa de 3 segundos cuando termina de escribir
-    initialDelay: 1000, // Delay inicial de 1 segundo
+    speed: 50,
+    deleteSpeed: 30,
+    delayBetweenCycles: 3000,
+    initialDelay: 1000,
   })
 
   return (

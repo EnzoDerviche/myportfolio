@@ -9,7 +9,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Mail, Clock } from "lucide-react"
 import { CardContent, CardDescription, CardHeader, CardTitle, Card } from "@/components/ui/card"
 
-// Importamos emailjs
 import emailjs from "@emailjs/browser"
 
 export default function ContactForm() {
@@ -25,22 +24,17 @@ export default function ContactForm() {
     message?: string
   }>({})
 
-  // Estados para rate limiting
   const [canSubmit, setCanSubmit] = useState(true)
   const [cooldownTime, setCooldownTime] = useState(0)
   const [submitCount, setSubmitCount] = useState(0)
 
-  // Configuración de rate limiting
-  const COOLDOWN_MINUTES = 2 // Tiempo de espera entre envíos
-  const MAX_SUBMISSIONS_PER_HOUR = 3 // Máximo 3 emails por hora
+  const COOLDOWN_MINUTES = 2 
+  const MAX_SUBMISSIONS_PER_HOUR = 3 
   const STORAGE_KEY = "contact_form_data"
-
-  // Verificar rate limiting al cargar el componente
   useEffect(() => {
     checkRateLimit()
   }, [])
 
-  // Countdown timer
   useEffect(() => {
     let interval: NodeJS.Timeout
     if (cooldownTime > 0) {
@@ -64,10 +58,8 @@ export default function ContactForm() {
     const data = JSON.parse(stored)
     const now = Date.now()
 
-    // Limpiar envíos antiguos (más de 1 hora)
     const recentSubmissions = data.submissions?.filter((timestamp: number) => now - timestamp < 60 * 60 * 1000) || []
 
-    // Verificar último envío
     const lastSubmission = data.lastSubmission || 0
     const timeSinceLastSubmission = now - lastSubmission
     const cooldownMs = COOLDOWN_MINUTES * 60 * 1000
@@ -85,13 +77,10 @@ export default function ContactForm() {
     const stored = localStorage.getItem(STORAGE_KEY)
     const data = stored ? JSON.parse(stored) : { submissions: [] }
 
-    // Limpiar envíos antiguos
     const recentSubmissions = data.submissions?.filter((timestamp: number) => now - timestamp < 60 * 60 * 1000) || []
 
-    // Agregar nuevo envío
     recentSubmissions.push(now)
 
-    // Guardar en localStorage
     localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify({
@@ -113,7 +102,6 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Verificar rate limiting
     if (!canSubmit) {
       setSubmitStatus({
         success: false,
@@ -150,7 +138,6 @@ export default function ContactForm() {
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey)
 
-      // Actualizar rate limiting después del envío exitoso
       updateRateLimit()
 
       setSubmitStatus({
@@ -158,7 +145,6 @@ export default function ContactForm() {
         message: "¡Mensaje enviado correctamente! Te responderé pronto.",
       })
 
-      // Resetear el formulario
       setFormData({ name: "", email: "", message: "" })
     } catch (error) {
       console.error("Error al enviar el mensaje:", error)

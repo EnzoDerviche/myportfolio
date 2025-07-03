@@ -21,10 +21,7 @@ export default function ContactSection({ isDark }: ContactSectionProps) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <ContactForm />
-
-          {/* Contact Info */}
           <div className="space-y-8">
             <Card>
               <CardContent className="p-6">
@@ -68,7 +65,6 @@ export default function ContactSection({ isDark }: ContactSectionProps) {
               </CardContent>
             </Card>
 
-            {/* Social Links */}
             <div className="flex space-x-4 justify-center">
               <Button size="icon" variant="outline" asChild>
                 <a href="https://github.com/EnzoDerviche" target="_blank" rel="noopener noreferrer">

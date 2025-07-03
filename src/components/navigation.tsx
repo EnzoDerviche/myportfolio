@@ -47,7 +47,6 @@ export default function Navigation({ isDark, activeSection, toggleTheme, scrollT
             <span className="ml-2 text-xl font-bold">EnzoDev</span>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
@@ -74,7 +73,6 @@ export default function Navigation({ isDark, activeSection, toggleTheme, scrollT
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
 
-            {/* Mobile menu button */}
             <div className="md:hidden">
               <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -84,7 +82,6 @@ export default function Navigation({ isDark, activeSection, toggleTheme, scrollT
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden">
           <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${isDark ? "bg-gray-800" : "bg-gray-50"}`}>
