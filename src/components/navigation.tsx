@@ -18,7 +18,7 @@ export default function Navigation({ isDark, activeSection, toggleTheme, scrollT
     { id: "hero", label: "Inicio" },
     { id: "about", label: "Sobre mí" },
     { id: "skills", label: "Skills" },
-    // { id: "projects", label: "Proyectos" },
+    { id: "projects", label: "Proyectos" },
     { id: "contact", label: "Contacto" },
   ]
 

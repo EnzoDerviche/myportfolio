@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Github, ExternalLink } from "lucide-react"
+import Image from "next/image"
 
 interface Project {
   title: string
@@ -16,38 +17,21 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-commerce Platform",
+    title: "Fires App",
     description:
-      "Plataforma completa de comercio electrónico con panel de administración, carrito de compras y pasarela de pagos.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    image: "/placeholder.svg?height=200&width=300",
-    github: "#",
-    demo: "#",
+      "Plataforma interactiva para visualización de focos de incendio desarrollada con React. Integra un mapa dinámico que muestra focos mediante círculos, permitiendo filtrar por fecha y nivel de intensidad. También permite al usuario dibujar polígonos sobre el mapa para delimitar zonas específicas y visualizar información precisa de incendios.",
+    technologies: ["React", "Redux", "CSS", "Typescript"],
+    image: "/img/fires-app.jpeg",
+    github: "https://github.com/EnzoDerviche/challengeSOF",
+    demo: "https://fires-app.vercel.app/",
   },
   {
-    title: "Task Management App",
-    description:
-      "Aplicación de gestión de tareas con colaboración en tiempo real, notificaciones y análisis de productividad.",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Socket.io"],
-    image: "/placeholder.svg?height=200&width=300",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Weather Dashboard",
-    description: "Dashboard meteorológico con pronósticos, mapas interactivos y alertas personalizadas.",
-    technologies: ["React", "Python", "FastAPI", "Chart.js"],
-    image: "/placeholder.svg?height=200&width=300",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Social Media Analytics",
-    description: "Herramienta de análisis de redes sociales con métricas avanzadas y reportes automatizados.",
-    technologies: ["Vue.js", "Node.js", "Redis", "D3.js"],
-    image: "/placeholder.svg?height=200&width=300",
-    github: "#",
-    demo: "#",
+    title: "Menu Videogame",
+    description: "Interfaz de menú para videojuego creada con Next.js. Simula una pantalla principal con botones animados y diseño adaptable para escritorio. Aunque sin funcionalidades completas, sirve como base visual para futuros desarrollos interactivos. Enfocado en UX/UI y estructura de navegación.",
+    technologies: ["Next.js", "React", "HTML", "CSS", "javascript"],
+    image: "/img/menu-videogame.jpeg",
+    github: "https://github.com/EnzoDerviche/GiantNiamble/tree/main/challenge-niamble",
+    demo: "https://menu-videogame.vercel.app/",
   },
 ]
 
@@ -66,12 +50,14 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
               <div className="relative overflow-hidden">
-                <img
-                  src={project.image || "/placeholder.svg"}
+                <Image
+                  src={project.image}
                   alt={project.title}
+                  width={200}
+                  height={550}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  priority={index < 2}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               </div>
               <CardHeader>
                 <CardTitle className="text-xl">{project.title}</CardTitle>

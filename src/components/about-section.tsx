@@ -73,7 +73,7 @@ export default function AboutSection() {
               key={index}
               className={`relative flex items-center ${index % 2 === 0 ? "justify-start" : "justify-end"} mb-8`}
             >
-              <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
+              <div className={`w-full z-[2] md:w-5/12 ${index % 2 === 0 ? "pr-8" : "pl-8"}` }>
                 <Card className="hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
                     <div className="flex items-center mb-2">
@@ -99,7 +99,7 @@ export default function AboutSection() {
                 </Card>
               </div>
 
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 z-[0] w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
             </div>
           ))}
         </div>

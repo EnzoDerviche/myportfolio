@@ -14,6 +14,7 @@ import { useSmoothScroll } from "@/hooks/use-smooth-scroll"
 import ScrollIndicator from "@/components/scroll-indicator"
 // Reemplazar el useEffect de scroll detection con el hook personalizado:
 import { useScrollSpy } from "@/hooks/use-scroll-spy"
+import ProjectsSection from "@/components/projects-section"
 
 export default function DeveloperPortfolio() {
   const [isDark, setIsDark] = useState(false)
@@ -39,10 +40,10 @@ export default function DeveloperPortfolio() {
         scrollToSection={scrollToSection}
       />
       <ScrollIndicator />
-      <HeroSection />
+      <HeroSection scrollToSection={scrollToSection}/>
       <AboutSection />
       <SkillsSection isDark={isDark} />
-      {/* <ProjectsSection /> */}
+      <ProjectsSection/>
       <ContactSection isDark={isDark} />
       <Footer isDark={isDark} />
     </div>

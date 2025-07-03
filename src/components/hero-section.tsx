@@ -1,15 +1,15 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Download } from "lucide-react"
+import { ChevronRight, Download } from "lucide-react"
 import Image from "next/image"
 import { useTypewriter } from "@/hooks/use-typewriter"
 
-// interface HeroSectionProps {
-//   scrollToSection: (sectionId: string) => void
-// }
+interface HeroSectionProps {
+  scrollToSection: (sectionId: string) => void
+}
 
-export default function HeroSection() {
+export default function HeroSection({ scrollToSection }: HeroSectionProps) {
   const { displayText, isComplete, isDeleting } = useTypewriter({
     text: "Desarrollador Full Stack con experiencia en React, Node.js y migración de sistemas legacy",
     speed: 50, // Velocidad de escritura
@@ -54,10 +54,10 @@ export default function HeroSection() {
                 Descargar CV
               </a>
             </Button>
-            {/* <Button size="lg" variant="outline" onClick={() => scrollToSection("projects")} className="px-8 py-3">
+            <Button size="lg" variant="outline" onClick={() => scrollToSection("projects")} className="px-8 py-3">
               Ver mis trabajos
               <ChevronRight className="ml-2 h-5 w-5" />
-            </Button> */}
+            </Button>
           </div>
         </div>
       </div>

@@ -212,7 +212,7 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               rows={8}
-              className="min-h-32"
+              className="min-h-60"
               required
             />
           </div>
