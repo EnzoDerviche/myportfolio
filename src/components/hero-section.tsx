@@ -25,7 +25,7 @@ export default function HeroSection() {
         <div className="text-center">
           <div className="mb-8">
             <Image
-              src="/img/profile.jpg"
+              src="/img/profile.jpeg"
               alt="Profile"
               width={128}
               height={128}
