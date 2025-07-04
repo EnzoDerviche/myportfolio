@@ -16,7 +16,7 @@ export default function ContactSection({ isDark }: ContactSectionProps) {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Contacto</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            ¿Estas en busqueda de un desarrollador? ¡Hablemos!
+            ¿Estas en búsqueda de un desarrollador? ¡Hablemos!
           </p>
         </div>
 
