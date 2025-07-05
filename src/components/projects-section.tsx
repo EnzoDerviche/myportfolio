@@ -38,7 +38,7 @@ const projects: Project[] = [
     description: "Landing page moderna y responsiva para un estudio de uñas, con secciones dedicadas a los servicios ofrecidos, una galería de imágenes para mostrar los trabajos realizados, y un apartado de contacto que incluye la ubicación del local mediante Google Maps. Además, integré accesos directos a WhatsApp e Instagram para facilitar la comunicación y permitir que las clientas puedan realizar consultas o reservar turnos de forma rápida y sencilla desde cualquier dispositivo.",
     technologies: ["Next.js", "React", "typescript", "Tailwind CSS"],
     image: "/img/milenasPage.jpeg",
-    github: "https://github.com/EnzoDerviche/GiantNiamble/tree/main/challenge-niamble",
+    github: "https://github.com/EnzoDerviche/milenasNails",
     demo: "https://milenas-nails.vercel.app/",
   },
 ]
