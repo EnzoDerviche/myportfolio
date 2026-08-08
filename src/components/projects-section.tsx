@@ -49,6 +49,30 @@ const projects: Project[] = [
     github: "https://github.com/EnzoDerviche/milenasNails",
     demo: "https://milenas-nails.vercel.app/",
   },
+  {
+    title: "Santa Pizza Napoletana",
+    description: "Landing page premium para Santa Pizza, una pizzería napolitana certificada en Argentina.",
+    technologies: ["Next.js", "React", "typescript", "Tailwind CSS"],
+    image: "/img/santapizza.png",
+    github: "https://github.com/EnzoDerviche/santa-pizza",
+    demo: "https://santa-pizza-sigma.vercel.app/",
+  },
+  {
+    title: "Derviche Construcciones",
+    description: "Sitio corporativo B2C para Derviche Construcciones, empresa de construcción y mantenimiento con base en Berazategui.",
+    technologies: ["Next.js", "React", "typescript", "Tailwind CSS"],
+    image: "/img/derviche.png",
+    github: "https://github.com/EnzoDerviche/derviche-construcciones",
+    demo: "https://derviche-construcciones.com/",
+  },
+  {
+    title: "Portfolio Abogado Valentin Gauna",
+    description: "Landing page/portfolio profesional para Valentín Hernán Gauna, procurador especializado en Derecho Penal.",
+    technologies: ["Next.js", "React", "typescript", "Tailwind CSS", "Lucide-react"],
+    image: "/img/valentin.png",
+    github: "https://github.com/EnzoDerviche/valentin-portfolio",
+    demo: "https://valentin-portfolio-kappa.vercel.app/",
+  },
 ]
 
 export default function ProjectsSection() {
