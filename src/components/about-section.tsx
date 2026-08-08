@@ -19,7 +19,7 @@ const experience: ExperienceItem[] = [
     company: "Phinxlab",
     period: "2024 - 2026",
     description:
-      "Responsable de modificar completamente la UI del proyecto, tomando decisiones clave sobre componentización y optimizando la eficiencia del desarrollo. Encargado de la mayoría de las consultas a la base de datos, asegurando un acceso y manejo eficiente de la información.",
+      "Fullstack en desarrollo de plataforma de IA construida desde cero. Diseñé e implementé servidores MCP para integrar y orquestar agentes con sistemas externos, enfocados en asistir analistas y arquitectos en gestión de trámites de obras CABA. Trabajé en arquitectura de RAG con bases de datos vectoriales para mejorar precisión de respuestas generadas por LLMs. Anteriormente rediseñe completo la UI de MiEscuela o AprendeBA con arquitectura de microfrontends, optimización de consultas SQL para performance de backend, y migración exitosa frontend/backend hacia Node.js + Express para escalabilidad.",
   },
   {
     type: "work",
@@ -27,7 +27,7 @@ const experience: ExperienceItem[] = [
     company: "Pixart SRL",
     period: "2021 - 2024",
     description:
-      "Fullstack en desarrollo de plataforma de IA construida desde cero. Diseñé e implementé servidores MCP para integrar y orquestar agentes con sistemas externos, enfocados en asistir analistas y arquitectos en gestión de trámites de obras CABA. Trabajé en arquitectura de RAG con bases de datos vectoriales para mejorar precisión de respuestas generadas por LLMs. Anteriormente rediseñe completo la UI de MiEscuela o AprendeBA con arquitectura de microfrontends, optimización de consultas SQL para performance de backend, y migración exitosa frontend/backend hacia Node.js + Express para escalabilidad.",
+      "Mejoré la funcionalidad, eficiencia y experiencia del usuario, optimizando el diseño para adaptarlo a las necesidades específicas de los clientes. Logré la migración exitosa del software de PHP a React y Node, mejorando la velocidad, eficiencia y preparación para futuras actualizaciones.",
   },
   {
     type: "education",
