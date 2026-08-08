@@ -21,6 +21,11 @@ const technologies: Technology[] = [
   { name: "NoSQL", icon: "🍃", color: "bg-green-600" },
   { name: "Git", icon: "📚", color: "bg-red-500" },
   { name: "Jira", icon: "📋", color: "bg-blue-700" },
+  { name: "IA / LLMs", icon: "🤖", color: "bg-emerald-500" },
+  { name: "Agentes IA", icon: "🧠", color: "bg-violet-600" },
+  { name: "MCP", icon: "🔌", color: "bg-indigo-500" },
+  { name: "RAG", icon: "📑", color: "bg-teal-600" },
+  { name: "Prompt Engineering", icon: "✨", color: "bg-fuchsia-600" },
 ]
 
 interface SkillsSectionProps {
